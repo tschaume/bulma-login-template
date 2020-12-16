@@ -19,9 +19,25 @@
     <section class="hero is-fullheight">
       <div class="hero-body">
         <div class="container has-text-centered">
-          <div class="column is-4 is-offset-4">
+          <div class="column is-8 is-offset-2">
             <div class="box">
-              <p class="subtitle is-4">Please login to proceed</p>
+              <% if (username) { %>
+              <h1 class="title has-text-white">Your Materials Project Profile</h1>
+              <div class="columns has-text-white">
+                  <div class="column is-one-third">Username</div>
+                  <div class="column"><%= username %></div>
+              </div>
+              <div class="columns has-text-white">
+                  <div class="column is-one-third">API Key</div>
+                  <div class="column"><%= apikey %></div>
+              </div>
+              <div class="columns has-text-white">
+                  <div class="column is-one-third">Groups</div>
+                  <div class="column"><%= groups %></div>
+              </div>
+              <a class="button" href="/?logout">Logout</a>
+              <% } else { %>
+              <h1 class="title has-text-white">The Materials Project</h1>
               <form>
                   <!-- TODO set callback based on cookie or query param -->
                 <div class="buttons is-centered" style="margin-bottom: 0;">
@@ -49,6 +65,7 @@
                     </span>
                     <span>Microsoft</span>
                   </a>
+                  <!--
                   <a class="button is-medium is-linkedin" href="/connect/linkedin">
                     <span class="icon">
                       <i class="fab fa-linkedin"></i>
@@ -61,6 +78,7 @@
                     </span>
                     <span>Twitter</span>
                   </a>
+                  -->
                   <a class="button is-medium is-openid" href="/connect/amazon">
                     <span class="icon">
                       <i class="fab fa-amazon"></i>
@@ -69,6 +87,7 @@
                   </a>
                 </div>
               </form>
+              <% } %>
             </div>
           </div>
         </div>
@@ -76,7 +95,6 @@
       <div class="hero-foot">
         <div class="container has-text-centered">
           <p class="footer-text">
-            <a href="https://www.aldiduzha.com?utm_source=Github" style="color: white;">Designed with <i class="fa fa-heart fa-fw" style="font-size: 10px; color: red;"></i> by Aldi Duzha</a>
           </p>
         </div>
       </div>
