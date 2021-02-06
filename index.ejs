@@ -24,18 +24,20 @@
               <% if (username) { %>
               <h1 class="title has-text-white">Your Materials Project Profile</h1>
               <div class="columns has-text-white">
-                  <div class="column is-one-third">Username</div>
-                  <div class="column"><%= username %></div>
+                  <div class="column has-text-weight-semibold has-text-right">Username</div>
+                  <div class="column has-text-left"><%= username %></div>
               </div>
               <div class="columns has-text-white">
-                  <div class="column is-one-third">API Key</div>
-                  <div class="column"><%= apikey %></div>
+                  <div class="column has-text-weight-semibold has-text-right">API Key</div>
+                  <div class="column has-text-left"><%= apikey %></div>
               </div>
               <div class="columns has-text-white">
-                  <div class="column is-one-third">Groups</div>
-                  <div class="column"><%= groups %></div>
+                  <div class="column has-text-weight-semibold has-text-right">Groups</div>
+                  <div class="column has-text-left"><%= groups %></div>
               </div>
-              <!-- <a class="button is-primary" href="">Back</a>-->
+              <% if (referrer) { %>
+              <a class="button is-primary" href="<%= referrer %>">Back</a>
+              <% } %>
               <a class="button is-danger" href="/logout">Logout</a>
               <% } else { %>
               <h1 class="title has-text-white">The Materials Project</h1>
