@@ -49,3 +49,11 @@ a:hover {
 .footer-text {
   font-weight: initial;
 }
+
+.buttons {
+  display: block;
+}
+
+.buttons > .button {
+  display: block;
+}

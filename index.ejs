@@ -19,78 +19,80 @@
     <section class="hero is-fullheight">
       <div class="hero-body">
         <div class="container has-text-centered">
-          <div class="column is-8 is-offset-2">
-            <div class="box">
-              <% if (username) { %>
-              <h1 class="title has-text-white">Your Materials Project Profile</h1>
-              <div class="columns has-text-white">
-                  <div class="column has-text-weight-semibold has-text-right">Username</div>
-                  <div class="column has-text-left"><%= username %></div>
-              </div>
-              <div class="columns has-text-white">
-                  <div class="column has-text-weight-semibold has-text-right">API Key</div>
-                  <div class="column has-text-left"><%= apikey %></div>
-              </div>
-              <div class="columns has-text-white">
-                  <div class="column has-text-weight-semibold has-text-right">Groups</div>
-                  <div class="column has-text-left"><%= groups %></div>
-              </div>
-              <% if (referrer) { %>
-              <a class="button is-primary" href="<%= referrer %>">Back</a>
-              <% } %>
-              <a class="button is-danger" href="/logout">Logout</a>
-              <% } else { %>
-              <h1 class="title has-text-white">The Materials Project</h1>
-              <form>
-                  <!-- TODO set callback based on cookie or query param -->
-                <div class="buttons is-centered" style="margin-bottom: 0;">
-                  <a class="button is-medium is-github" href="/connect/github">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>GitHub</span>
-                  </a>
-                  <a class="button is-medium is-youtube" href="/connect/google">
-                    <span class="icon">
-                      <i class="fab fa-google"></i>
-                    </span>
-                    <span>Google</span>
-                  </a>
-                  <a class="button is-medium is-facebook" href="/connect/facebook">
-                    <span class="icon">
-                      <i class="fab fa-facebook"></i>
-                    </span>
-                    <span>Facebook</span>
-                  </a>
-                  <a class="button is-medium is-microsoft" href="/connect/microsoft">
-                    <span class="icon">
-                      <i class="fab fa-microsoft"></i>
-                    </span>
-                    <span>Microsoft</span>
-                  </a>
-                  <!--
-                  <a class="button is-medium is-linkedin" href="/connect/linkedin">
-                    <span class="icon">
-                      <i class="fab fa-linkedin"></i>
-                    </span>
-                    <span>LinkedIn</span>
-                  </a>
-                  <a class="button is-medium is-twitter" href="/connect/twitter">
-                    <span class="icon">
-                      <i class="fab fa-twitter"></i>
-                    </span>
-                    <span>Twitter</span>
-                  </a>
-                  -->
-                  <a class="button is-medium is-openid" href="/connect/amazon">
-                    <span class="icon">
-                      <i class="fab fa-amazon"></i>
-                    </span>
-                    <span>Amazon</span>
-                  </a>
+          <div class="columns is-centered">
+            <div class="column is-6">
+              <div class="box">
+                <% if (username) { %>
+                <h1 class="title has-text-white">Your Materials Project Profile</h1>
+                <div class="columns has-text-white">
+                    <div class="column has-text-weight-semibold has-text-right">Username</div>
+                    <div class="column has-text-left"><%= username %></div>
                 </div>
-              </form>
-              <% } %>
+                <div class="columns has-text-white">
+                    <div class="column has-text-weight-semibold has-text-right">API Key</div>
+                    <div class="column has-text-left"><%= apikey %></div>
+                </div>
+                <div class="columns has-text-white">
+                    <div class="column has-text-weight-semibold has-text-right">Groups</div>
+                    <div class="column has-text-left"><%= groups %></div>
+                </div>
+                <% if (referrer) { %>
+                <a class="button is-primary" href="<%= referrer %>">Back</a>
+                <% } %>
+                <a class="button is-danger" href="/logout">Logout</a>
+                <% } else { %>
+                <h1 class="title has-text-white">The Materials Project</h1>
+                <form>
+                    <!-- TODO set callback based on cookie or query param -->
+                  <div class="buttons is-centered" style="margin-bottom: 0;">
+                    <a class="button is-medium is-github" href="/connect/github">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Continue with GitHub</span>
+                    </a>
+                    <a class="button is-medium is-youtube" href="/connect/google">
+                      <span class="icon">
+                        <i class="fab fa-google"></i>
+                      </span>
+                      <span>Continue with Google</span>
+                    </a>
+                    <a class="button is-medium is-facebook" href="/connect/facebook">
+                      <span class="icon">
+                        <i class="fab fa-facebook"></i>
+                      </span>
+                      <span>Continue with Facebook</span>
+                    </a>
+                    <a class="button is-medium is-microsoft" href="/connect/microsoft">
+                      <span class="icon">
+                        <i class="fab fa-microsoft"></i>
+                      </span>
+                      <span>Continue with Microsoft</span>
+                    </a>
+                    <!--
+                    <a class="button is-medium is-linkedin" href="/connect/linkedin">
+                      <span class="icon">
+                        <i class="fab fa-linkedin"></i>
+                      </span>
+                      <span>LinkedIn</span>
+                    </a>
+                    <a class="button is-medium is-twitter" href="/connect/twitter">
+                      <span class="icon">
+                        <i class="fab fa-twitter"></i>
+                      </span>
+                      <span>Twitter</span>
+                    </a>
+                    -->
+                    <a class="button is-medium is-openid" href="/connect/amazon">
+                      <span class="icon">
+                        <i class="fab fa-amazon"></i>
+                      </span>
+                      <span>Continue with Amazon</span>
+                    </a>
+                  </div>
+                </form>
+                <% } %>
+              </div>
             </div>
           </div>
         </div>
