@@ -43,7 +43,6 @@
                 <% } else { %>
                 <h1 class="title has-text-white">The Materials Project</h1>
                 <form>
-                    <!-- TODO set callback based on cookie or query param -->
                   <div class="buttons is-centered" style="margin-bottom: 0;">
                     <a class="button is-medium is-github" href="/connect/github">
                       <span class="icon">
@@ -69,25 +68,17 @@
                       </span>
                       <span>Continue with Microsoft</span>
                     </a>
-                    <!--
-                    <a class="button is-medium is-linkedin" href="/connect/linkedin">
-                      <span class="icon">
-                        <i class="fab fa-linkedin"></i>
-                      </span>
-                      <span>LinkedIn</span>
-                    </a>
-                    <a class="button is-medium is-twitter" href="/connect/twitter">
-                      <span class="icon">
-                        <i class="fab fa-twitter"></i>
-                      </span>
-                      <span>Twitter</span>
-                    </a>
-                    -->
                     <a class="button is-medium is-openid" href="/connect/amazon">
                       <span class="icon">
                         <i class="fab fa-amazon"></i>
                       </span>
                       <span>Continue with Amazon</span>
+                    </a>
+                    <a class="button is-medium is-info" href="/connect/portier">
+                      <span class="icon">
+                        <i class="fas fa-envelope"></i>
+                      </span>
+                      <span>Continue with E-Mail</span>
                     </a>
                   </div>
                 </form>
@@ -100,7 +91,7 @@
       <div class="hero-foot">
         <div class="container has-text-centered has-text-white">
           <p class="footer-text">
-          If you’re having trouble logging in, or if you can't use any of the listed login providers,
+          If you’re having trouble logging in, or if you can't use any of the listed login methods,
           please <a class="is-link" href="mailto:feedback@materialsproject.org">email us</a> or post on our
           <a class="is-link" href="https://matsci.org/materials-project">forum</a>.
           </p>
