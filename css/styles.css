@@ -48,6 +48,8 @@ a:hover {
 
 .footer-text {
   font-weight: initial;
+  font-size: 1.25rem;
+  color: #fff;
 }
 
 .buttons {
