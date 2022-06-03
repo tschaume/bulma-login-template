@@ -19,6 +19,11 @@
     <section class="hero is-fullheight">
       <div class="hero-body">
         <div class="container has-text-centered">
+          <% if (error) { %>
+          <div class="columns is-centered">
+            <div class="notification is-danger is-light"><%= error %></div>
+          </div>
+          <% } %>
           <div class="columns is-centered">
             <div class="column is-6">
               <div class="box">
